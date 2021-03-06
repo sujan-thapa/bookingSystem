@@ -8,13 +8,20 @@
 
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <!-- Add Material font (Roboto) and Material icon as needed -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    {{-- bootstrap css --}}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     {{-- css lin --}}
-    <link href="/css/site/app.css" rel="stylesheet">
+    <link rel="stylesheet" href=@section('css') @show>
+
+
+    {{-- <link href="/css/site/app.css" rel="stylesheet"> --}}
     <title>@section('title')
     @show</title>
 
@@ -35,15 +42,7 @@
         </p> --}}
 
 
-    {{-- login form --}}
-    <div class="content">
-        <h3>Sign In</h3>
-        <form action="" method="post" enctype="multipart/form-data">
-            @csrf
 
-            <input type="email" name="email" id="email">
-        </form>
-    </div>
 
     @show
 

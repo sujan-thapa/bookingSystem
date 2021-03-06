@@ -26,6 +26,7 @@ mix.js("resources/js/app.js", "public/js/app.js")
         //
     ]);*/
     .sass("resources/sass/dashboard/app.scss", "public/css/dashboard/app.css")
+    .sass("resources/sass/site/register.scss", "public/css/site/register.css")
     .sass("resources/sass/site/app.scss", "public/css/site/app.css");
 
 mix.browserSync({

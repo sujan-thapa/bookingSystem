@@ -20,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('auth/login');
 });
+
+// Route::post('register', 'welcome');
+
+// Route::post('register', '');
+Route::view('register', 'auth.register');
