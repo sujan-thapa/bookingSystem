@@ -11,7 +11,40 @@ const mix = require('laravel-mix');
  |
  */
 
+/*
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+
+*/
+
+mix.js("resources/js/app.js", "public/js/app.js")
+    // .js("resources/js/app.js", "public/js/app.js")
+
+    /*.postCss('resources/css/app.css', 'public/css', [
+        //
+    ]);*/
+    .sass("resources/sass/dashboard/app.scss", "public/css/dashboard/app.css")
+    .sass("resources/sass/site/app.scss", "public/css/site/app.css");
+
+mix.browserSync({
+    proxy: "http://localhost:8000",
+    // Customise the placement of the snippet
+    // and ignore certain paths
+    snippetOptions: {
+        // Ignore all HTML files within the templates folder
+        ignorePaths: "templates/*.html",
+
+        // Provide a custom Regex for inserting the snippet.
+        rule: {
+            match: /<\/body>/i,
+            fn: function (snippet, match) {
+                return snippet + match;
+            },
+        },
+    },
+});
+
+//for function
+mix.disableNotifications();

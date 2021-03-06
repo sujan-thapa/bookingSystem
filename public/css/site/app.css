@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+#viddeo {
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.content {
+  overflow: hidden;
+}
+.content h3 {
+  color: #fff;
+  text-align: center;
+}
+.content form {
+  text-align: center;
+}
