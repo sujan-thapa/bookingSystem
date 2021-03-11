@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> --}}
     <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
 
+    {{-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> --}}
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
@@ -29,7 +30,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 </head>
-<body>
+<body id=@section('id') @show>
     @section('body')
 
 
@@ -45,7 +46,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
+    {{-- <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> --}}
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
     <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
-    <script src="js/app.js"></script>
+    <script src="js/dashboard/app.js"></script>
 </body>
 </html>

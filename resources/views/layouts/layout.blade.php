@@ -57,6 +57,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
     <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
-    <script src="js/app.js"></script>
+    <script src="js/dashboard/app.js"></script>
 </body>
 </html>

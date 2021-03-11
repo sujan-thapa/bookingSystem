@@ -20,7 +20,7 @@ mix.js('resources/js/app.js', 'public/js')
 */
 
 mix.js("resources/js/app.js", "public/js/app.js")
-    // .js("resources/js/app.js", "public/js/app.js")
+    .js("resources/js/dashboard/app.js", "public/js/dashboard/app.js")
 
     /*.postCss('resources/css/app.css', 'public/css', [
         //
