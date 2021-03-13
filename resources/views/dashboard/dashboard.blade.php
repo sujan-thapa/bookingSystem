@@ -80,10 +80,56 @@
                 </a>
 
             </nav>
+</div>
+
+        {{-- for card view of boocing request, cust, driver and vehicles info --}}
+
+        <div class="container">
+            <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="/images/dashboardIcons/request.png" alt="">
+
+                    <h3>Booking Request</h3>
+                    {{-- <p>dss</p>
+                    <p>sssss</p> --}}
+                </div>
+            </div>
+            <div class="column second">
+                <div class="card">
+                    <img src="/images/dashboardIcons/ccar.png" alt="">
+                    <h3>Vehicles</h3>
+                    {{-- <p>dss</p>
+                    <p>sssss</p> --}}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="/images/dashboardIcons/information.png" alt="">
+
+                    <h3>Customer Info</h3>
+
+                    {{-- <p>dss</p>
+                    <p>sssss</p> --}}
+                </div>
+            </div>
+            <div class="column second">
+                <div class="card">
+                    <img src="/images/dashboardIcons/information.png" alt="">
+                    <h3>Driver Info</h3>
+                    {{-- <p>dss</p>
+                    <p>sssss</p> --}}
+                </div>
+            </div>
+        </div>
+
         </div>
 
 
-        <h1>Vg Dashboard</h1>
+
 
 
 

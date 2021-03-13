@@ -1,22 +1,22 @@
-/*===== GOOGLE FONTS =====*/
+// google fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/*===== VARIABLES CSS =====*/
+// css
 :root {
     --nav-width: 92px;
 
-    /*===== Colores =====*/
+    // Colours
     --first-color: #0C5DF4;
     --bg-color: #12192C;
     --sub-color: #B6CEFC;
     --white-color: #FFF;
 
-    /*===== Fuente y tipografia =====*/
+
     --body-font: 'Poppins', sans-serif;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
 
-    /*===== z index =====*/
+    // zindex
     --z-fixed: 100;
 }
 
@@ -191,5 +191,101 @@ a {
     margin-left: 20px;
     border-radius: 50%;
 }
+
+
+/* Remove extra left and right margins, due to padding */
+// .row {
+//     margin: 0 -5px;
+// }
+
+.row{
+
+    margin-left: 100px;
+    margin-top: 50px;
+
+    // padding-left: 60px;
+
+    /* Float two columns side by side */
+    .column {
+        // border-radius: 10px;
+        // border: 2px solid red;
+        // // padding: 10px;
+        // border-radius: 50px 20px;
+        float: left;
+        width: 30%;
+        // margin: 50px 10px;
+        // margin-top: 50px;
+        // column-gap: 30px;
+        .card {
+            box-shadow: 0 5px 10px 0 rgba(49, 48, 48, 0.39);
+            background-color: rgb(80, 80, 80);
+            border-radius: 15px;
+            padding: 16px;
+            cursor: pointer;
+            height: 10rem;
+
+            // for displaying text in center
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // border: 3px solid green;
+            img{
+
+                display: block;
+                // // text-align: center;
+                margin: auto;
+                // margin-right: auto;
+                // position: absolute;
+                // position: relative;
+                // background-color: red;
+                width: 100px;
+                height: 100px;
+
+
+                // z-index: -1;
+
+            }
+            h3{
+                margin: auto;
+
+                position: absolute;
+                z-index: 1;
+                // // transform: translate(20px,5px);
+                color: rgb(255, 255, 255);
+
+
+
+            }
+            // h3{
+            //     position: absolute;
+            //     // top: 50%;
+            //     // left: 50%;
+            //     transform: translate(-50%, -50%);
+            //     font-family: var(--body-font);
+            //     color: rgb(255, 255, 255);
+            //     // width: auto;
+
+            // }
+        }
+    }
+    .second {
+        margin-left: 80px;
+        // padding-left: 60px;
+    }
+    // Clear floats after the columns
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+
+    }
+
+
+}
+
+
+
+
+
 
 
