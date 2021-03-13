@@ -73,7 +73,7 @@
                     </div>
 
                 </div>
-                <a href="#" class="nav__link">
+                <a href="/logout" class="nav__link">
                     {{-- <ion-icon name="log-out-outline" class="nav__icon"></ion-icon> --}}
                     <i name="log-out-outline" class="nav_icon material-icons" >logout</i>
                     <span class="nav__name">Log Out</span>

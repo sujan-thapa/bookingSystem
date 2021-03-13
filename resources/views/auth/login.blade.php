@@ -8,7 +8,7 @@
 {{-- login form --}}
     <div class="content">
         <h3>Sign In</h3>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="/login" method="post" enctype="multipart/form-data">
             @csrf
 
             {{-- <input type="email" name="email" id="email"> --}}

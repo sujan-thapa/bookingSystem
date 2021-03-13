@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +21,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
+    // return view('auth/login');
+    if (Auth::check()) {
+        return redirect('/dashboard');
+    }
     return view('auth/login');
-});
+})->name('login');
 
 // Route::post('register', 'welcome');
 
@@ -29,5 +35,12 @@ Route::view('register', 'auth.register');
 Route::post('/register', [RegisterController::class,'register']);
 
 Route::view('/dashboard', 'dashboard.dashboard');
+
+// for logging in
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+// for logging out
+Route::get('/logout', [LoginController::class, 'logout']);
+
 
 
