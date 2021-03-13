@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,8 @@ Route::get('/', function () {
 
 // Route::post('register', '');
 Route::view('register', 'auth.register');
+Route::post('/register', [RegisterController::class,'register']);
 
-Route::view('dashboard', 'dashboard.dashboard');
+Route::view('/dashboard', 'dashboard.dashboard');
 
 

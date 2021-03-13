@@ -11,16 +11,13 @@
 {{-- For Register content --}}
 <div class="content">
         <h3>Sign Up</h3>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="/register" method="POST" enctype="multipart/form-data">
             @csrf
-
-            {{-- <input type="email" name="email" id="email"> --}}
-
-            <label for="aName">Name</label>
-            <input type="text" id="aName" name="aName" placeholder="Enter your name"><br><br>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
 
             <label for="image">Image</label>
-            <input type="file" id="aImage" name="aImage" placeholder="Upload Photo"><br><br>
+            <input type="file" id="image" name="image" placeholder="Upload Photo"><br><br>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Enter your email Address"><br><br>
@@ -34,14 +31,14 @@
             <div class="row">
                 <div class="column">
                     <label for="age">Age</label>
-                    <input type="number" class="form-control" placeholder="Age">
+                    <input type="number" id="age" name="age" class="form-control" placeholder="Age">
                 </div>
                 <div class="column gender">
                     <label for="gender" id="gendder" >Gender</label>
                     {{-- <input type="text" class="form-control" placeholder="Age"> --}}
                     <div id="radioButton" class="row">
-                        <input type="radio" name="Gender" class="radioButtonn" value="Male">Male</input>
-                        <input type="radio" name="Gender" class="radioButtonn" value="Male">Female</input>
+                        <input type="radio" name="gender" class="radioButtonn" value="Male">Male</input>
+                        <input type="radio" name="gender" class="radioButtonn" value="Male">Female</input>
 
                         {{-- Male<input type="radio" name="Gender" class="radioButtonn" value="Male" />
                         Female<input type="radio" name="Gender" class="radioButtonn" value="Female" /> --}}
