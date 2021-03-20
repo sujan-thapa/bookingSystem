@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Auth;
@@ -31,10 +32,18 @@ Route::get('/', function () {
 // Route::post('register', 'welcome');
 
 // Route::post('register', '');
-Route::view('register', 'auth.register');
+// Route::view('register', 'auth.register');
+Route::get('/register', function () {
+    if (Auth::check()) {
+        return redirect('/');
+    }else{
+        return view('auth.register');
+    }
+});
 Route::post('/register', [RegisterController::class,'register']);
 
-Route::view('/dashboard', 'dashboard.dashboard');
+
+// Route::view('/dashboard', 'dashboard.dashboard');
 
 // for logging in
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -43,4 +52,6 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/logout', [LoginController::class, 'logout']);
 
 
-
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/dashboard', [DashboardController::class, 'show']);
+});

@@ -9,6 +9,15 @@
 @section('id','bodyId')
 
 @section('content')
+
+{{-- for dynamic profiles --}}
+@foreach($user as $key => $value)
+                {{-- <p> {{ $value->email }} </p>
+                <p> {{ $value->name }} </p>
+                <img id="for" src="{{asset('/images/user/')}}/{{$value->image}}" alt="vg"> --}}
+@endforeach
+
+
 <div class="l-navbar" id="navbar">
             <nav class="nav">
                 <div>
@@ -21,10 +30,11 @@
 
                     {{-- for profile image --}}
 
+
                     <div class="profileImage">
                         <i name="menu-outline" class="nav__toggle material-icons" id="toggleId">toc</i>
                         <a href="#">
-                        <img id="profileImage" src="/images/rom.jpg" alt="Admin" width="40">
+                        <img id="profileImage" src="{{asset('/images/user/')}}/{{$value->image}}" alt="Admin" width="40">
                         </a>
                     </div>
                     <hr>
@@ -85,6 +95,16 @@
         {{-- for card view of boocing request, cust, driver and vehicles info --}}
 
         <div class="container">
+
+            {{-- for testing dynamic nature of dashboard --}}
+            {{-- <h1>vg</h1>
+            @foreach($user as $key => $value)
+                <p> {{ $value->email }} </p>
+                <p> {{ $value->name }} </p>
+                <img id="for" src="{{asset('/images/user/')}}/{{$value->image}}" alt="vg">
+            @endforeach --}}
+
+
             <div class="row">
             <div class="column">
                 <div class="card">

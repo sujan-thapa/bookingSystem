@@ -44,7 +44,10 @@ class RegisterController extends Controller
 
             // file move
             $file = $request->file('image');
-            $fileName  = Str::uuid() . '_image.' . $file->getClientOriginalExtension();
+            // $filename = time() . '.' . $extension;
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            // $fileName  = Str::uuid() . '_image.' . $file->getClientOriginalExtension();
             $file->move('images/user', $fileName);
 
             $user->name = $request['name'];

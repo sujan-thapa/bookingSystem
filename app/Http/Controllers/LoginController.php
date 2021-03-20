@@ -10,10 +10,10 @@ class LoginController extends Controller
     //for loggin in
     public function authenticate(Request $request){
 
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required'
-        ]);
+        // $request->validate([
+        //     'email' => 'required',
+        //     'password' => 'required'
+        // ]);
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
             return redirect('/dashboard');
         }else{
